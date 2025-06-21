@@ -1,4 +1,3 @@
-import NextLink from 'next/link'
 import { useRouter } from 'next/router'
 import { PropsWithChildren, useEffect, useRef } from 'react'
 import styled from 'styled-components'
@@ -47,7 +46,7 @@ function NavItemsList({ items }: NavigationDrawerProps) {
       {items.map((singleItem, idx) => {
         return (
           <NavItem key={idx}>
-            <NextLink href={singleItem.href}>{singleItem.title}</NextLink>
+            <a href={`#${singleItem?.href}`}>{singleItem.title}</a>
           </NavItem>
         )
       })}
