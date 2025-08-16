@@ -15,7 +15,7 @@ const OverTitle = styled.span`
     margin-right: 1em;
   }
 
-  font-size: 1.3rem;
+  font-size: 2rem;
   letter-spacing: 0.02em;
   font-weight: bold;
   line-height: 0;

@@ -9,9 +9,12 @@ export default function Cta() {
     <CtaWrapper id="clients">
       <Container>
         <Stack>
-          <OverTitle>Trusted by Leading Organizations</OverTitle>
+          <OverTitle>OUR VISION</OverTitle>
           <Description>
-             We&#39;ve partnered with forward-thinking businesses, development agencies, and institutions to drive impact and innovation.
+            At BDRS, our vision is to build client programs on a foundation of thoughtful, strategic counsel. We help clients achieve what
+            they want, communicate what they have to say so it is heard, believed and leads to positive action. We are committed to
+            delivering creative, strategic, and well-executed programs—on time, within budget, and beyond expectations—ensuring satisfaction
+            at every level.
           </Description>
         </Stack>
       </Container>

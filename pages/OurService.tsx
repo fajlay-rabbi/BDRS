@@ -20,9 +20,10 @@ const ServicItem = ({
 }: {
   item: OurServicesDataType;
   onClick?: () => void;
-  serviceContent: { itemTitle: string; points: string[] }[];
+  serviceContent: { itemTitle: string; points: { text: string; subpoint?: string[] }[] }[];
 }) => {
-  const isSelected = serviceContent.length > 0 && serviceContent[0].itemTitle === item?.title;
+  const isSelected =
+    serviceContent.length > 0 && serviceContent[0].itemTitle === item?.items[0]?.itemTitle;
 
   return (
     <ServiceItemWrapper selected={isSelected}>
@@ -31,9 +32,10 @@ const ServicItem = ({
   );
 };
 
-
 const OurService = ({ title, overTitle }: PropsWithChildren<BasicSectionProps>) => {
-  const [serviceContent, setServiceContent] = useState<{ itemTitle: string; points: string[] }[]>(OurServicesData[0]?.items || []);
+  const [serviceContent, setServiceContent] = useState<
+    { itemTitle: string; points: { text: string; subpoint?: string[] }[] }[]
+  >(OurServicesData[0]?.items || []);
 
   const serviceContentHandler = ({ item }: { item: OurServicesDataType }) => {
     setServiceContent(item?.items);
@@ -44,30 +46,51 @@ const OurService = ({ title, overTitle }: PropsWithChildren<BasicSectionProps>) 
       <ContentContainer id="services">
         <CustomOverTitle>{overTitle}</CustomOverTitle>
         <Title>{title}</Title>
-
+        <DescriptionText>
+          We proudly offer the following services to our valued clients:
+        </DescriptionText>
         <ServiceTitleWrapper>
           <ServiceTitle>
-            {OurServicesData?.map((item, index) => {
-              return <ServicItem item={item} key={index} onClick={() => serviceContentHandler({ item })} serviceContent={serviceContent} />;
-            })}
+            {OurServicesData?.map((item, index) => (
+              <ServicItem
+                item={item}
+                key={index}
+                onClick={() => serviceContentHandler({ item })}
+                serviceContent={serviceContent}
+              />
+            ))}
           </ServiceTitle>
           <ServiceContentWrapper>
-            {serviceContent?.map((item, index) => {
-              return (
-                <ServiceTextWrapper key={index}>
-                  <h2>{item.itemTitle}</h2>
-                  <ul>
-                    {item?.points?.map((singleItem, index) => {
-                      return (
-                        <li style={{ fontSize: '1.4rem' }} key={index}>
-                          {singleItem}
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </ServiceTextWrapper>
-              );
-            })}
+            {serviceContent?.map((item, index) => (
+              <ServiceTextWrapper key={index}>
+                <h2>{item.itemTitle}</h2>
+                <ul>
+                  {item.points?.map((point, idx) => (
+                    <li key={idx} style={{ fontSize: '1.4rem', marginBottom: '1.5rem' }}>
+                      {point.text}
+                      {point.subpoint && point.subpoint.length > 0 && (
+                        <ul
+                          style={{
+                            marginTop: '0.5rem',
+                            marginLeft: '1.5rem',
+                            listStyleType: 'circle',
+                          }}
+                        >
+                          {point.subpoint.map((sub, subIdx) => (
+                            <li
+                              key={subIdx}
+                              style={{ fontSize: '1.2rem', marginBottom: '0.3rem' }}
+                            >
+                              {sub}
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </ServiceTextWrapper>
+            ))}
           </ServiceContentWrapper>
         </ServiceTitleWrapper>
       </ContentContainer>
@@ -75,10 +98,13 @@ const OurService = ({ title, overTitle }: PropsWithChildren<BasicSectionProps>) 
   );
 };
 
+/* Styled Components */
 const Title = styled.h1`
-  font-size: 2rem;
-  font-weight: bold;
-  line-height: 1.1;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #222;
+  line-height: 1.5;
+  opacity: 80%;
   margin-bottom: 4rem;
   letter-spacing: -0.03em;
 
@@ -86,6 +112,14 @@ const Title = styled.h1`
     font-size: 1.2rem;
     margin-bottom: 2rem;
   }
+`;
+
+const DescriptionText = styled.p`
+  font-size: 1.3rem;
+  font-weight: 600;
+  opacity: 80%;
+  color: #222;
+  margin-bottom: 2.5rem;
 `;
 
 const CustomOverTitle = styled(OverTitle)`
@@ -96,11 +130,11 @@ const ServiceTitleWrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
-  gap: 2rem; /* Optional: adds spacing between the left/right content */
+  gap: 2rem;
 
   ${media('<=tablet')} {
     flex-direction: column;
-    gap: 1.5rem; /* Optional: tighter gap on smaller screens */
+    gap: 1.5rem;
   }
 `;
 
@@ -109,18 +143,29 @@ const ServiceTitle = styled.div`
 `;
 
 const ServiceContentWrapper = styled.div`
-  background: #1673ff;
+  background: #273b8a;
   padding: 30px;
   border-radius: 5px;
   color: white;
   width: 100%;
   height: 100%;
+  min-height: 250px;
   margin-top: 20px;
 `;
 
 const ServiceTextWrapper = styled.div`
   display: flex;
   flex-direction: column;
+
+  h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+  }
 `;
 
 const ServiceItemWrapper = styled.div<{ selected: boolean }>`
@@ -131,42 +176,11 @@ const ServiceItemWrapper = styled.div<{ selected: boolean }>`
     user-select: none;
     width: fit-content;
     transition: all 0.3s ease-in-out;
-    color: ${({ selected }) => (selected ? '#1673FF' : 'inherit')};
+    color: ${({ selected }) => (selected ? '#273b8a' : 'inherit')};
 
     &:active {
       transform: scale(0.85);
     }
-  }
-`;
-
-const ImageContainer = styled.div`
-  flex: 1;
-
-  position: relative;
-  &:before {
-    display: block;
-    content: '';
-    width: 100%;
-    padding-top: calc((9 / 16) * 100%);
-  }
-
-  & > div {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-  }
-
-  & img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 5px;
-  }
-
-  ${media('<=desktop')} {
-    width: 100%;
   }
 `;
 
@@ -181,16 +195,8 @@ const BasicSectionWrapper = styled(Container)`
   align-items: center;
   flex-direction: ${(p: Props) => (p.reversed ? 'row-reverse' : 'row')};
 
-  ${ImageContainer} {
-    margin: ${(p: Props) => (p.reversed ? '0 0 0 5rem' : '0 5rem 0 0')};
-  }
-
   ${media('<=desktop')} {
     flex-direction: column;
-
-    ${ImageContainer} {
-      margin: 0 0 2.5rem 0;
-    }
   }
 `;
 

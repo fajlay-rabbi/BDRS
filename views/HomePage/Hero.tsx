@@ -7,16 +7,17 @@ import OverTitle from 'components/OverTitle';
 import { media } from 'utils/media';
 
 export default function Hero() {
-
   return (
     <HeroWrapper>
       <Contents>
-        <CustomOverTitle>Empowering Markets, Enabling Impact</CustomOverTitle>
-        <Heading>Designing Data-Driven Solutions For Inclusive Growth</Heading>
+        <CustomOverTitle>Shaping Tomorrow, Today</CustomOverTitle>
+        <Heading>Driving Business Growth Through Research, Strategy, and Innovation</Heading>
         <Description>
-          We partner with businesses, development organizations, and governments to create strategies grounded in insight and innovation. Our work spans investment advisory, market systems development, and digital transformation — building resilient ecosystems in emerging economies.
+          At BDRS, we believe that success comes from understanding complexity and transforming it into opportunity. Our team blends
+          creativity with data-driven insights to deliver public relations, custom research, CSR solutions, and strategic consulting. With
+          every project, we empower organizations to make smarter decisions, inspire confidence, and build a stronger, more sustainable
+          future.
         </Description>
-
         <CustomButtonGroup>
           <Button>
             Explore Our Services <span>&rarr;</span>

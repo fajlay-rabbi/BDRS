@@ -5,10 +5,14 @@ import BasicSection from 'components/BasicSection';
 import { EnvVars } from 'env';
 import { images } from 'public/resourses';
 import { getAllPosts } from 'utils/postsFetcher';
+import Chairman from 'views/HomePage/Chairman';
+import CoreValues from 'views/HomePage/CoreValues';
 import Cta from 'views/HomePage/Cta';
-import FeaturesGallery from 'views/HomePage/FeaturesGallery';
 import Hero from 'views/HomePage/Hero';
-import Partners from 'views/HomePage/Partners';
+import OurLeaderShip from 'views/HomePage/OurLeaderShip';
+import WhoWeAre from 'views/HomePage/WhoWeAre';
+import WhyChooseUs from 'views/HomePage/WhyChooseUs';
+import Director from './Director';
 import OurService from './OurService';
 
 export default function Homepage({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
@@ -24,28 +28,39 @@ export default function Homepage({ posts }: InferGetStaticPropsType<typeof getSt
       <HomepageWrapper>
         <WhiteBackgroundContainer>
           <Hero />
-          <Partners />
-
-          <BasicSection
-            id="about-us"
-            imageUrl={images.about}
-            title="Build Trust Quickly By Stating Your Value Proposition And Expertise."
-            overTitle="ABOUT US"
-          >
+          <WhoWeAre />
+          <DarkerBackgroundContainer>
+            <Cta />
+          </DarkerBackgroundContainer>
+          <BasicSection id="mission" imageUrl={images.about} title="Our Mission" overTitle="Passion Meets Precision">
             <p>
-              We are a strategic consulting and digital innovation firm focused on shaping the future of emerging markets. By combining
-              data-driven insights, sector expertise, and a human-centered approach, we help businesses, development partners, and
-              governments unlock new opportunities for sustainable growth. Our multidisciplinary team works across industries to design bold
-              solutions that create measurable impact. Would you like an alternate version with a more casual, startup-style tone or
-              tailored to a specific industry like fintech, education, or sustainability?
+              <span style={{ fontWeight: 'bold' }}>BDRS</span> mission is to deliver a tangible contribution to the achievement of a goal.
+              Be it the management of your media relations, the conduct of unique events, the conduct of extensive market research, provide
+              with first hand data service and consultation, all we do is characterized by our infinite passion for our job and is based on
+              synergy, transparency and credibility through expertise.
+            </p>
+            <p style={{ marginTop: '5px' }}>
+              In brief: our mission is to grant you maximum serenity about the successful management of your public image and to enhance
+              your business growth- wherever and however you choose us to support you.
             </p>
           </BasicSection>
-
-          <OurService overTitle="Our Services" title="Strategic Services That Drive Sustainable Growth." />
+          <CoreValues />
+          <OurService
+            overTitle="What We Do"
+            title="We guide our clients through high-stakes decisions and transformative moments so they can
+                  adapt, grow, and thrive. We are here to help you discover opportunities and achieve results that
+                  bridge what is with what can be. Our edge is the power of perspective — driven by deep industry
+                  insight, specialized expertise, and a spirit of true collaboration. We measure our success by the
+                  success of our clients.
+                  "
+          />
         </WhiteBackgroundContainer>
+
         <DarkerBackgroundContainer>
-          <Cta />
-          <FeaturesGallery />
+          <WhyChooseUs />
+          <OurLeaderShip />
+          <Chairman />
+          <Director />
         </DarkerBackgroundContainer>
       </HomepageWrapper>
     </>
@@ -62,7 +77,7 @@ const DarkerBackgroundContainer = styled.div`
   background: rgb(var(--background));
 
   & > *:not(:first-child) {
-    margin-top: 15rem;
+    margin-top: 5rem;
   }
 `;
 
