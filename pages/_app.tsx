@@ -24,10 +24,8 @@ const navItems: NavItems = [
   { title: 'Industries', href: '#' },
   { title: 'Capabilities', href: '#' },
   { title: 'Leadership', href: '#' },
-  { title: 'About', href: 'about-us' },
+  { title: 'About', href: '#' },
   { title: 'Careers', href: '#' },
-  // { title: 'Services', href: 'services' },
-  // { title: 'Clients', href: 'clients' },
 ];
 
 const TinaCMS = dynamic(() => import('tinacms'), { ssr: false });
