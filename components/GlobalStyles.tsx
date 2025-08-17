@@ -18,22 +18,6 @@ export const GlobalStyle = createGlobalStyle`
   --logoColor: #243A5A;
 }
 
-.next-dark-theme {
-  --background: 26,32,44;
-  --secondBackground: 45,55,72;
-  --text: 237,237,238;
-  --textSecondary: 255,255,255;
-  --primary: 214,223,36;
-  --secondary: 39,59,138;
-  --tertiary: 231,241,251;
-  --cardBackground: 45,55,72;
-  --inputBackground: 45,55,72;
-  --navbarBackground: 45,55,72;
-  --modalBackground: 26,32,44;
-  --errorColor: 207,34,46;
-  --logoColor: #fff;
-}
-
 :root {
   --font: 'Poppins', sans-serif;
   
