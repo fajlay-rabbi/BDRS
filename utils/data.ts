@@ -13,6 +13,12 @@ export type OurServicesDataType = {
   items: ItemType[];
 };
 
+export type NavbarContentType = {
+  title?: string;
+  children: (NavbarContentType | string)[];
+}
+
+
 
 export const OurServicesData = [
   {
@@ -97,3 +103,378 @@ export const OurServicesData = [
     ]
   }
 ];
+
+export const navbarContent = [
+  {
+    "title": "Insights",
+    "children": [
+      {
+        "title": "BDRS Insights",
+        "children": [
+          {
+            "title": "Industries",
+            "children": [
+              "Business Services", "Consumer Products", "Education", "Energy & Environment",
+              "Financial Services", "Healthcare Services", "Industrials", "Life Sciences & Pharma",
+              "Media & Entertainment", "MedTech", "Private Equity", "Retail", "Sustainability",
+              "Technology", "Travel, Transport & Logistics"
+            ]
+          },
+        ]
+      },
+      {
+        "title": "Sustainability Centre of Excellence",
+        "children": [
+          {
+            "title": "",
+            "children": [
+              "Navigating the Journey to Decarbonisation",
+              "Fuelling the Future of Aviation",
+              "Creating Value Through Sustainability",
+              "Global Corporate Sustainability Survey 2022",
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Consumer Insights Center",
+        "children": [
+          {
+            "title": "",
+            "children": [
+              "View Our Insights",
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Healthcare Insights Center",
+        "children": [
+          {
+            "title": "",
+            "children": [
+              "View Our Insights",
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Webinars",
+        "children": [
+          {
+            "title": "",
+            "children": [
+              "View Our Webinars",
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Podcasts",
+        "children": [
+          {
+            "title": "",
+            "children": [
+              "Listen To Our Podcasts",
+            ]
+          }
+        ]
+      },
+    ]
+  },
+  {
+    "title": "Industries",
+    "children": [
+      {
+        "title": "Business Services",
+        "children": [
+          {
+            "title": 'Practice Areas',
+            "children": [
+              "Industrial and Professional Services", "Freight & Logistics",
+              "Outsourcing and Support Services", "Properties and Facilities Management",
+              "Recruitment and Staffing"]
+          }
+        ]
+      },
+      {
+        "title": "Consumer Products",
+        "children": [
+          {
+            "title": "Practice Areas",
+            "children": [
+              "Apparel", "Beauty & Personal Care", "Food & Beverage", "Food Ingredients",
+              "Footwear", "Health & Wellness", "Home Furnishings", "Household Products",
+              "Pet", "Sporting Goods"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Education",
+        "children": [
+          {
+            "title": "Practice Areas",
+            "children": [
+              "Transnational Education", "K-12", "Higher Education", "Education Technology"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Energy & Environment",
+        "children": [
+          {
+            "title": "Practice Areas",
+            "children": [
+              "Environmental Services", "Oil & Gas", "Power & Utilities", "Renewables",
+              "Waste & Recycling", "Water"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Financial Services",
+        "children": [
+          {
+            "title": "Practice Areas",
+            "children": [
+              "Banking", "Debt Management", "Insurance", "Investment & Wealth Management",
+              "Payments", "Specialist Lending"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Healthcare Services",
+        "children": [
+          {
+            "title": "Practice Areas",
+            "children": [
+              "Health Plan and Private Health Insurance", "Employer Healthcare", "Acute Care and Hospital",
+              "Physician Practice Management", "Mental and Behavioral Health",
+              "Post-Acute Care, Long-Term Care and Residential Care", "Homecare and Home Healthcare",
+              "Diagnostic and Ancillary Services", "Tech-Enabled Services and Healthcare IT",
+              "Healthcare Supply Chain", "Telehealth and Digital Transformation"
+            ]
+          }
+        ]
+      },
+    ]
+  },
+  {
+    "title": "Capabilities",
+    "children": [
+      {
+        "title": "Analytical Sciences",
+        "children": [
+          {
+            "title": "Practice Areas",
+            "children": ["Analytical Sciences"]
+          }
+        ]
+      },
+      {
+        "title": "Artificial Intelligence",
+        "children": [
+          {
+            "title": "Practice Areas",
+            "children": ["Analytical Sciences", "Unlock the Power of AI"]
+          }
+        ]
+      },
+      {
+        "title": "Data & Analytics",
+        "children": [
+          {
+            "title": "Practice Areas",
+            "children": ["Advanced Analytics Strategy", "Unlock the Power of AI"]
+          }
+        ]
+      },
+      {
+        "title": "Digital",
+        "children": [
+          {
+            "title": "",
+            "children": [
+              "Advance Digital Maturity", "Assess Digital Potential", "Create a Digital Culture",
+              "Deliver Impactful Experiences", "Launch and Amplify Disruptive New Businesses",
+              "Unlock the Power of AI"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Major Capital Projects Advisory",
+        "children": [
+          {
+            "title": "",
+            "children": ["Major Capital Projects Advisory"]
+          }
+        ]
+      },
+      {
+        "title": "Marketing & Sales",
+        "children": [
+          {
+            "title": "",
+            "children": [
+              "Loyalty & Customer Experience", "Marketing Strategy", "Sales Force Effectiveness",
+              "New Product", "Brand Strategy", "Channel Strategy", "Customer Targeting and Value Proposition",
+              "Go-to-Market and Commercial Organization"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Mergers & Acquisitions",
+        "children": [
+          {
+            "title": "",
+            "children": [
+              "Carve-outs & Divestitures", "Due Diligence", "Exit Support",
+              "Joint Ventures & Alliances", "M&A Synergies", "Post-Merger Integration", "Target Identification",
+              "Operational Due Diligence"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Operations & Supply Chain",
+        "children": [
+          {
+            "title": "",
+            "children": [
+              "Planning", "Procurement", "Manufacturing", "Logistics", "Distribution", "Supply Chain Strategy"
+            ]
+          }
+        ]
+      },
+    ]
+  },
+{
+  "title": "Leadership",
+  "children": [
+    {
+      "title": "Leadership",
+      "children": [
+        { "title": "Americas", "children": [] },
+        { "title": "Asia-Pacific", "children": [] },
+        { "title": "Europe", "children": [] },
+        { "title": "Expansion to the Middle East", "children": [] }
+      ]
+    }
+  ]
+},
+{
+  "title": "About",
+  "children": [
+    {
+      "title": "About B.D.R.S",
+      "children": [
+        { "title": "Who We Are", "children": [] },
+        { "title": "What We Do", "children": [] },
+        { "title": "What We Believe", "children": [] },
+        { "title": "Our Sustainability", "children": [] }
+      ]
+    },
+    {
+      "title": "Who We Are",
+      "children": [
+        { "title": "Get to Know Our People", "children": [] },
+        { "title": "Meet Our Practitioners", "children": [] },
+        { "title": "Learn Who Heads Our Organization", "children": [] },
+        { "title": "Look at All the Places We Go", "children": [] },
+        { "title": "Find B.D.R.S In the News", "children": [] }
+      ]
+    },
+    {
+      "title": "What We Do",
+      "children": [
+        { "title": "Discover the B.D.R.S Collaborative", "children": [] },
+        { "title": "The Edge Strategy framework", "children": [] },
+        { "title": "B.D.R.S Sustainability Centre of Excellence", "children": [] },
+        { "title": "B.D.R.S at the World Economic Forum", "children": [] },
+        { "title": "Our Sustainability", "children": [] },
+        { "title": "Environmental Responsibility", "children": [] },
+        { "title": "Community Responsibility", "children": [] },
+        { "title": "Diversity and Inclusion", "children": [] },
+        { "title": "Pro Bono Work", "children": [] },
+        { "title": "The B.D.R.S Network", "children": [] },
+        { "title": "Books", "children": [] },
+        { "title": "Predictable Winners", "children": [] }
+      ]
+    }
+  ]
+},
+{
+  "title": "Careers",
+  "children": [
+    {
+      "title": "Careers at B.D.R.S",
+      "children": [
+        { "title": "Why Join B.D.R.S?", "children": [] },
+        { "title": "Life at B.D.R.S", "children": [] },
+        { "title": "The B.D.R.S Career", "children": [] }
+      ]
+    },
+    {
+      "title": "Why Join B.D.R.S?",
+      "children": [
+        { "title": "Who We Are", "children": [] },
+        { "title": "Get to Know Our People", "children": [] },
+        { "title": "Meet Our Practitioners", "children": [] },
+        { "title": "Learn Who Heads Our Organization", "children": [] },
+        { "title": "Look at All the Places We Go", "children": [] },
+        { "title": "Find B.D.R.S in the News", "children": [] },
+        { "title": "What You'll Do", "children": [] },
+        { "title": "Enhanced Opportunities", "children": [] },
+        { "title": "Flexible Work Options", "children": [] },
+        { "title": "Mentorship & Coaching", "children": [] },
+        { "title": "Roles at B.D.R.S", "children": [] },
+        { "title": "Training & Professional Development", "children": [] },
+        { "title": "What We Do", "children": [] },
+        { "title": "Discover B.D.R.S Collaborative", "children": [] },
+        { "title": "Books", "children": [] },
+        { "title": "Edge Strategy Framework", "children": [] },
+        { "title": "B.D.R.S Sustainability Centre of Excellence", "children": [] },
+        { "title": "We Are Global", "children": [] },
+        { "title": "International Programs", "children": [] }
+      ]
+    },
+    {
+      "title": "Life at B.D.R.S",
+      "children": [
+        { "title": "Community Responsibility", "children": [] },
+        { "title": "The B.D.R.S Network", "children": [] },
+        { "title": "Diversity and Inclusion", "children": [] },
+        { "title": "Environmental Responsibility", "children": [] },
+        { "title": "Pro Bono Work", "children": [] }
+      ]
+    },
+    {
+      "title": "The B.D.R.S Career",
+      "children": [
+        { "title": "Enhanced Opportunities", "children": [] },
+        { "title": "Flexible Work Options", "children": [] },
+        { "title": "International Programs", "children": [] },
+        { "title": "Mentorship & Coaching", "children": [] },
+        { "title": "Roles at B.D.R.S", "children": [] },
+        { "title": "Senior Staff Development", "children": [] },
+        { "title": "Training and Professional Development", "children": [] },
+        { "title": "Apply", "children": [] },
+        { "title": "Why L.E.K", "children": [] },
+        { "title": "Life at B.D.R.S", "children": [] },
+        { "title": "The B.D.R.S Career", "children": [] },
+        { "title": "Life at B.D.R.S Blog", "children": [] },
+        { "title": "Discovering a Consulting Career", "children": [] },
+        { "title": "Inside B.D.R.S", "children": [] },
+        { "title": "The Recruiting Experience", "children": [] }
+      ]
+    }
+  ]
+}
+
+]
+

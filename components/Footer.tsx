@@ -2,6 +2,7 @@ import NextLink from 'next/link';
 import { FacebookIcon, LinkedinIcon, TwitterIcon } from 'react-share';
 import styled from 'styled-components';
 import Container from 'components/Container';
+import { NavItems } from 'types';
 import { media } from 'utils/media';
 
 type SingleFooterListItem = { title: string; href: string };
@@ -9,6 +10,15 @@ type FooterListItems = SingleFooterListItem[];
 type SingleFooterList = { title: string; items: FooterListItems };
 type FooterItems = SingleFooterList[];
 
+const navItems: NavItems = [
+  { title: 'Insights', href: '#' },
+  { title: 'Industries', href: '#' },
+  { title: 'Capabilities', href: '#' },
+  { title: 'Leadership', href: '#' },
+  { title: 'About', href: '#' },
+  { title: 'Careers', href: '#' },
+];
+  
 const footerItems: FooterItems = [
   {
     title: 'Company',

@@ -63,7 +63,7 @@ const Content = styled.div`
 `;
 
 const Description = styled.p`
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   line-height: 1.8;
   color: #222;
   opacity: 0.90;

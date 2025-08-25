@@ -11,12 +11,16 @@ export default function Hero() {
     <HeroWrapper>
       <Contents>
         <CustomOverTitle>Shaping Tomorrow, Today</CustomOverTitle>
-        <Heading>Driving Business Growth Through Research, Strategy, and Innovation</Heading>
+        <Heading>
+          Driving Business Growth Through Research, Strategy, and Innovation
+        </Heading>
         <Description>
-          At BDRS, we believe that success comes from understanding complexity and transforming it into opportunity. Our team blends
-          creativity with data-driven insights to deliver public relations, custom research, CSR solutions, and strategic consulting. With
-          every project, we empower organizations to make smarter decisions, inspire confidence, and build a stronger, more sustainable
-          future.
+          At BDRS, we believe that success comes from understanding complexity
+          and transforming it into opportunity. Our team blends creativity with
+          data-driven insights to deliver public relations, custom research, CSR
+          solutions, and strategic consulting. With every project, we empower
+          organizations to make smarter decisions, inspire confidence, and build
+          a stronger, more sustainable future.
         </Description>
         <CustomButtonGroup>
           <Button>
@@ -33,12 +37,22 @@ export default function Hero() {
 
 const HeroWrapper = styled(Container)`
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding-top: 5rem;
+  gap: 4rem;
 
   ${media('<=desktop')} {
-    padding-top: 1rem;
+    padding-top: 3rem;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  ${media('<=tablet')} {
+    padding-top: 2rem;
+    gap: 2rem;
   }
 `;
 
@@ -47,12 +61,31 @@ const Contents = styled.div`
   max-width: 60rem;
 
   ${media('<=desktop')} {
+    max-width: 90%;
+  }
+
+  ${media('<=tablet')} {
     max-width: 100%;
   }
 `;
 
 const CustomButtonGroup = styled(ButtonGroup)`
   margin-top: 4rem;
+
+  ${media('<=tablet')} {
+    margin-top: 2.5rem;
+  }
+
+  ${media('<=phone')} {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    button {
+      width: 100%;
+    }
+  }
 `;
 
 const ImageContainer = styled.div`
@@ -61,15 +94,28 @@ const ImageContainer = styled.div`
   justify-content: flex-end;
   align-items: flex-start;
 
+  svg,
   img {
-    max-width: 5rem;
+    max-width: 100%;
+    height: auto;
   }
 
   ${media('<=desktop')} {
-    margin-top: 2rem;
     justify-content: center;
+    align-items: center;
+  }
+
+  ${media('<=tablet')} {
+    svg,
     img {
       max-width: 80%;
+    }
+  }
+
+  ${media('<=phone')} {
+    svg,
+    img {
+      max-width: 90%;
     }
   }
 `;
@@ -80,12 +126,29 @@ const Description = styled.p`
   line-height: 1.6;
 
   ${media('<=desktop')} {
+    font-size: 1.6rem;
+  }
+
+  ${media('<=tablet')} {
     font-size: 1.5rem;
+  }
+
+  ${media('<=phone')} {
+    font-size: 1.4rem;
+    line-height: 1.5;
   }
 `;
 
 const CustomOverTitle = styled(OverTitle)`
   margin-bottom: 2rem;
+
+  ${media('<=tablet')} {
+    margin-bottom: 1.5rem;
+  }
+
+  ${media('<=phone')} {
+    margin-bottom: 1rem;
+  }
 `;
 
 const Heading = styled.h1`
@@ -95,8 +158,20 @@ const Heading = styled.h1`
   margin-bottom: 4rem;
   letter-spacing: -0.03em;
 
-  ${media('<=tablet')} {
+  ${media('<=desktop')} {
     font-size: 4.6rem;
+    margin-bottom: 3rem;
+  }
+
+  ${media('<=tablet')} {
+    font-size: 3.8rem;
     margin-bottom: 2rem;
+    line-height: 1.2;
+  }
+
+  ${media('<=phone')} {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
   }
 `;

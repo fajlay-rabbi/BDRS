@@ -113,7 +113,7 @@ const Title = styled.h1`
 `;
 
 const TextTitle = styled.h2`
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 600;
   margin-bottom: 1rem;
   color: #222;
@@ -125,7 +125,7 @@ const TextTitle = styled.h2`
 `;
 
 const Description = styled.p`
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   opacity: 0.8;
   line-height: 1.6;
   color: #444;
@@ -160,7 +160,7 @@ const Card = styled.div`
   gap: 0.8rem;
   cursor: pointer;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
+  transition: all 0.03s ease;
 
   &:hover {
     transform: translateY(-5px);
@@ -178,7 +178,7 @@ const IconWrapper = styled.div`
 
 
 const CardText = styled.p`
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   line-height: 1.6;
   text-align: center;
   color: #222;
