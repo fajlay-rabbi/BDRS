@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import { media } from 'utils/media';
 import Container from './Container';
 import OverTitle from './OverTitle';
-import RichText from './RichText';
 
 export interface BasicSectionProps {
   imageUrl: string | StaticImageData;
@@ -23,7 +22,7 @@ export default function BasicSection({ imageUrl, title, overTitle, reversed, chi
       <ContentContainer>
         <CustomOverTitle>{overTitle}</CustomOverTitle>
         <Title>{title}</Title>
-        <RichText>{children}</RichText>
+        <p style={{fontSize: '1.6rem'}}>{children}</p>
       </ContentContainer>
     </BasicSectionWrapper>
   );

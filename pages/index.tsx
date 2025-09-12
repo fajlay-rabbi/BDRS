@@ -1,10 +1,8 @@
-import { InferGetStaticPropsType } from 'next';
 import Head from 'next/head';
 import styled from 'styled-components';
 import BasicSection from 'components/BasicSection';
 import { EnvVars } from 'env';
 import { images } from 'public/resourses';
-import { getAllPosts } from 'utils/postsFetcher';
 import Chairman from 'views/HomePage/Chairman';
 import CoreValues from 'views/HomePage/CoreValues';
 import Cta from 'views/HomePage/Cta';
@@ -15,7 +13,7 @@ import WhyChooseUs from 'views/HomePage/WhyChooseUs';
 import Director from './Director';
 import OurService from './OurService';
 
-export default function Homepage({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
+export default function Homepage() {
   return (
     <>
       <Head>
@@ -92,11 +90,3 @@ const WhiteBackgroundContainer = styled.div`
     margin-top: 15rem;
   }
 `;
-
-export async function getStaticProps() {
-  return {
-    props: {
-      posts: await getAllPosts(),
-    },
-  };
-}

@@ -2,7 +2,6 @@ import { useRouter } from 'next/router'
 import { PropsWithChildren, useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import { NavItems } from 'types'
-import ClientOnly from './ClientOnly'
 import CloseIcon from './CloseIcon'
 import OriginalDrawer from './Drawer'
 
@@ -12,7 +11,6 @@ export default function NavigationDrawer({ children, items }: NavigationDrawerPr
   return (
     <OriginalDrawer.Drawer>
       <Wrapper>
-        <ClientOnly>
           <OriginalDrawer.Target openClass="drawer-opened" closedClass="drawer-closed">
             <div className="my-drawer">
               <div className="my-drawer-container">
@@ -21,7 +19,6 @@ export default function NavigationDrawer({ children, items }: NavigationDrawerPr
               </div>
             </div>
           </OriginalDrawer.Target>
-        </ClientOnly>
       </Wrapper>
       {children}
     </OriginalDrawer.Drawer>
