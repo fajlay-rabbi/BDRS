@@ -3,25 +3,21 @@ import styled from 'styled-components';
 import BasicSection from 'components/BasicSection';
 import { EnvVars } from 'env';
 import { images } from 'public/resourses';
-import Chairman from 'views/HomePage/Chairman';
 import CoreValues from 'views/HomePage/CoreValues';
 import Cta from 'views/HomePage/Cta';
 import Hero from 'views/HomePage/Hero';
+import OurClient from 'views/HomePage/OurClient';
 import OurLeaderShip from 'views/HomePage/OurLeaderShip';
 import WhoWeAre from 'views/HomePage/WhoWeAre';
 import WhyChooseUs from 'views/HomePage/WhyChooseUs';
-import Director from './Director';
-import OurService from './OurService';
+import Director from '../views/HomePage/Director';
+import OurService from '../views/HomePage/OurService';
 
 export default function Homepage() {
   return (
     <>
       <Head>
         <title>{EnvVars.SITE_NAME}</title>
-        <meta
-          name="description"
-          content="Tempor nostrud velit fugiat nostrud duis incididunt Lorem deserunt est tempor aute dolor ad elit."
-        />
       </Head>
       <HomepageWrapper>
         <WhiteBackgroundContainer>
@@ -30,16 +26,12 @@ export default function Homepage() {
           <DarkerBackgroundContainer>
             <Cta />
           </DarkerBackgroundContainer>
-          <BasicSection id="mission" imageUrl={images.about} title="Our Mission" overTitle="Passion Meets Precision">
+          <BasicSection id="ourMission" imageUrl={images.about} title="Our Mission" overTitle="Passion Meets Precision">
             <p>
               <span style={{ fontWeight: 'bold' }}>BDRS</span> mission is to deliver a tangible contribution to the achievement of a goal.
               Be it the management of your media relations, the conduct of unique events, the conduct of extensive market research, provide
               with first hand data service and consultation, all we do is characterized by our infinite passion for our job and is based on
               synergy, transparency and credibility through expertise.
-            </p>
-            <p style={{ marginTop: '5px' }}>
-              In brief: our mission is to grant you maximum serenity about the successful management of your public image and to enhance
-              your business growth- wherever and however you choose us to support you.
             </p>
           </BasicSection>
           <CoreValues />
@@ -57,8 +49,8 @@ export default function Homepage() {
         <DarkerBackgroundContainer>
           <WhyChooseUs />
           <OurLeaderShip />
-          <Chairman />
           <Director />
+          <OurClient />
         </DarkerBackgroundContainer>
       </HomepageWrapper>
     </>

@@ -22,7 +22,7 @@ export default function BasicSection({ imageUrl, title, overTitle, reversed, chi
       <ContentContainer>
         <CustomOverTitle>{overTitle}</CustomOverTitle>
         <Title>{title}</Title>
-        <p style={{fontSize: '1.6rem'}}>{children}</p>
+        <p style={{fontSize: '2rem'}}>{children}</p>
       </ContentContainer>
     </BasicSectionWrapper>
   );
@@ -32,7 +32,7 @@ const Title = styled.h1`
   font-size: 3.2rem;
   font-weight: bold;
   line-height: 1.1;
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
   letter-spacing: -0.03em;
 
   ${media('<=tablet')} {
@@ -42,6 +42,7 @@ const Title = styled.h1`
 `;
 
 const CustomOverTitle = styled(OverTitle)`
+  font-size: 1.6rem;
   margin-bottom: 2rem;
 `;
 
@@ -84,7 +85,7 @@ type Props = Pick<BasicSectionProps, 'reversed'>;
 const BasicSectionWrapper = styled(Container)`
   scroll-margin-top: 140px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: ${(p: Props) => (p.reversed ? 'row-reverse' : 'row')};
 
   ${ImageContainer} {

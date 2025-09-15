@@ -12,6 +12,7 @@ import Container from './Container';
 import Drawer from './Drawer';
 import { HamburgerIcon } from './HamburgerIcon';
 import Logo from './Logo';
+import Link from 'next/link';
 
 type ScrollingDirections = 'up' | 'down' | 'none';
 type NavbarContainerProps = { hidden: boolean; transparent: boolean };
@@ -103,9 +104,30 @@ export default function Navbar() {
           </LogoWrapper>
         </NextLink>
         <NavItemList>
-          {navbarContent?.map((singleItem: NavbarContentType) => (
+          {/* {navbarContent?.map((singleItem: NavbarContentType) => (
             <NavItem key={singleItem.title} item={singleItem} setActiveNav={setActiveNav} />
-          ))}
+          ))} */}
+          <Link href="/">
+            <a style={{textDecoration: 'none', color: '#2d2d2d'}}>Home</a>
+          </Link>
+          <Link href="#whoWeAre">
+            <a style={{textDecoration: 'none', color: '#2d2d2d'}}>Who We Are</a>
+          </Link>
+          <Link href="#ourVision">
+            <a style={{textDecoration: 'none', color: '#2d2d2d'}}>Our Vision</a>
+          </Link>
+          <Link href="#ourMission">
+            <a style={{textDecoration: 'none', color: '#2d2d2d'}}>Our Mission</a>
+          </Link>
+          <Link href="#ourCoreValues">
+            <a style={{textDecoration: 'none', color: '#2d2d2d'}}>Our Core Values</a>
+          </Link>
+          <Link href="#whatWeDo">
+            <a style={{textDecoration: 'none', color: '#2d2d2d'}}>What We Do</a>
+          </Link>
+          <Link href="#ourClients">
+            <a style={{textDecoration: 'none', color: '#2d2d2d'}}>Our Clients</a>
+          </Link>
         </NavItemList>
         <HamburgerMenuWrapper>
           <HamburgerIcon aria-label="Toggle menu" onClick={toggle} />
@@ -163,6 +185,11 @@ function NavItem({ item, setActiveNav }: { item: NavbarContentType; setActiveNav
 
 const NavItemList = styled.div`
   display: flex;
+  item-align: center;
+  gap: 4rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-decoration: none;
   list-style: none;
 
   ${media('<desktop')} {

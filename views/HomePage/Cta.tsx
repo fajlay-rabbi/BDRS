@@ -1,12 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import Container from 'components/Container';
 import OverTitle from 'components/OverTitle';
 import { media } from 'utils/media';
 
 export default function Cta() {
   return (
-    <CtaWrapper id="clients">
+    <CtaWrapper id="ourVision">
       <Container>
         <Stack>
           <OverTitle>OUR VISION</OverTitle>
@@ -22,8 +21,18 @@ export default function Cta() {
   );
 }
 
+
+const Container = styled.div`
+  position: relative;
+  max-width: 130em;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+`;
+
 const Description = styled.div`
-  font-size: 1.8rem;
+  font-size: 2rem;
+  text-align: justify;
   color: rgba(var(--textSecondary), 0.8);
 `;
 

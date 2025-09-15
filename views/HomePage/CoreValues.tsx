@@ -1,12 +1,12 @@
 // components/CoreValues.tsx
 import Image from 'next/image';
 import styled from 'styled-components';
-import { images } from 'public/resourses'; // Make sure you have icon images for each value
+import { images } from 'public/resourses';
 
 const coreValuesData = [
   {
     title: 'Integrity',
-    description: 'Always do what’s right by honoring our commitments and the code of ethics.',
+    description: 'Always do what’s right by honoring our commitments.',
     image: images.Integrity,
   },
   {
@@ -43,7 +43,7 @@ export default function CoreValues() {
       </Header>
 
       <CardWrapper>
-        {coreValuesData.map((item) => (
+        {coreValuesData?.map((item) => (
           <Card key={item.title}>
             <ImageWrapper>
               <Image src={item.image} alt={item.title} width={35} height={35} />
@@ -59,7 +59,9 @@ export default function CoreValues() {
 
 /* Styled Components */
 
-const Wrapper = styled.section`
+const Wrapper = styled.section.attrs({
+  id: "ourCoreValues",
+})`
   padding: 4rem 2rem;
   display: flex;
   flex-direction: column;
@@ -73,14 +75,14 @@ const Header = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: 700;
   margin-bottom: 1rem;
   color: rgb(var(--text));
 `;
 
 const Description = styled.p`
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   line-height: 1.6;
   color: #222;
 `;
@@ -99,11 +101,10 @@ const Card = styled.div`
   padding: 2rem 1.5rem;
   text-align: center;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
+  transition: all 0.08s ease-in-out;
   cursor: pointer;
 
   &:hover {
-    transform: translateY(-5px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
   }
 `;
@@ -113,14 +114,14 @@ const ImageWrapper = styled.div`
 `;
 
 const CardTitle = styled.h3`
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
   color: #222;
 `;
 
 const CardDescription = styled.p`
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 500;
   color: #222;
   line-height: 1.4;

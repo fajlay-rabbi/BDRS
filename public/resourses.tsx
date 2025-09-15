@@ -5,7 +5,8 @@ export const images = {
   OurFinger: '/assets/Our_finger.png',
   ByUncovering: '/assets/by_uncovering.png',
   ByRallying: '/assets/by_rallying.png',
-  WhoWeAre: '/assets/whoweare.jpg',
+  WhoWeAre: '/assets/whowe.png',
+  whatWeDo: '/assets/whatWeDo.jpg',
 
     // Core Values images
   Integrity: '/assets/integrity.jpg',
