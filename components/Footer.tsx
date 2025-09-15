@@ -51,7 +51,7 @@ const FooterWrapper = styled.div`
   margin-top: -10px;
   padding-top: 10rem;
   padding-bottom: 4rem;
-  background: rgb(var(--secondary));
+  background: #273B8A;
   color: rgb(var(--textSecondary));
 `;
 

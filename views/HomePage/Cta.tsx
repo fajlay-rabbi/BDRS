@@ -62,5 +62,5 @@ const Stack = styled.div`
 
 const CtaWrapper = styled.div`
   scroll-margin-top: 140px;
-  background: rgb(var(--secondary));
+  background: #273B8A;
 `;

@@ -10,7 +10,7 @@ const OverTitle = styled.span`
     display: inline-block;
     width: 0.9em;
     height: 0.9em;
-    background-color: rgb(var(--primary));
+    background-color: #D6DF24;
     line-height: 0;
     margin-right: 1em;
   }

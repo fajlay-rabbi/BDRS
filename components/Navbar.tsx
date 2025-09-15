@@ -246,7 +246,7 @@ const NavbarContainer = styled.div<NavbarContainerProps>`
   height: 8rem;
   z-index: var(--z-navbar);
 
-  background-color: rgb(var(--navbarBackground));
+  background-color: #fff;
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 5%);
   visibility: ${(p) => (p.hidden ? 'hidden' : 'visible')};
   transform: ${(p) => (p.hidden ? `translateY(-8rem) translateZ(0) scale(1)` : 'translateY(0) translateZ(0) scale(1)')};
